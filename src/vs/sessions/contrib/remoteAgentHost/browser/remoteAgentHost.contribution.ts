@@ -533,7 +533,7 @@ export class RemoteAgentHostContribution extends Disposable implements IWorkbenc
 
 	/**
 	 * Authenticate using protectedResources from agent info in root state.
-	 * Resolves tokens via the standard VS Code authentication service.
+	 * Resolves tokens via the standard eNif authentication service.
 	 *
 	 * Marks the matching provider's `authenticationPending` observable while
 	 * the auth pass is in flight so that sessions surface as still loading.
@@ -575,7 +575,7 @@ export class RemoteAgentHostContribution extends Disposable implements IWorkbenc
 
 	/**
 	 * Resolve a bearer token for a set of authorization servers using the
-	 * standard VS Code authentication service provider resolution.
+	 * standard eNif authentication service provider resolution.
 	 */
 	private _resolveTokenForResource(resourceServer: URI, authorizationServers: readonly string[], scopes: readonly string[]): Promise<string | undefined> {
 		return resolveTokenForResource(resourceServer, authorizationServers, scopes, this._authenticationService, this._logService, '[RemoteAgentHost]');

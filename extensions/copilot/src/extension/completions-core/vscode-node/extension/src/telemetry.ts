@@ -11,11 +11,11 @@ import { Logger } from '../../lib/src/logger';
 
 function exception(accessor: ServicesAccessor, error: unknown, origin: string, logger?: Logger) {
 	if (error instanceof Error && error.name === 'Canceled') {
-		// these are VS Code cancellations
+		// these are eNif cancellations
 		return;
 	}
 	if (error instanceof Error && error.name === 'CodeExpectedError') {
-		// expected errors from VS Code
+		// expected errors from eNif
 		return;
 	}
 	handleException(accessor, error, origin, logger);

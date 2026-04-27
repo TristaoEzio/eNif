@@ -440,16 +440,16 @@ class ESRPReleaseService {
 			owners: [{ owner: { userPrincipalName: 'jomo@microsoft.com' } }],
 			approvers: [{ approver: { userPrincipalName: 'jomo@microsoft.com' }, isAutoApproved: true, isMandatory: false }],
 			releaseInfo: {
-				title: 'VS Code',
+				title: 'eNif',
 				properties: {
 					'ReleaseContentType': 'InstallPackage'
 				},
 				minimumNumberOfApprovers: 1
 			},
 			productInfo: {
-				name: 'VS Code',
+				name: 'eNif',
 				version,
-				description: 'VS Code'
+				description: 'eNif'
 			},
 			accessPermissionsInfo: {
 				mainPublisher: 'VSCode',

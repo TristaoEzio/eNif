@@ -104,7 +104,7 @@
 			"problemMatcher": "$esbuild-watch"
 		},
 		{
-			"label": "VS Code - Build",
+			"label": "eNif - Build",
 			"dependsOn": [
 				"Core - Transpile",
 				"Core - Typecheck",
@@ -166,7 +166,7 @@
 			"problemMatcher": "$esbuild"
 		},
 		{
-			"label": "Kill VS Code - Build",
+			"label": "Kill eNif - Build",
 			"dependsOn": [
 				"Kill Core - Transpile",
 				"Kill Core - Typecheck",
@@ -177,21 +177,21 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Restart VS Code - Build",
+			"label": "Restart eNif - Build",
 			"dependsOn": [
-				"Kill VS Code - Build",
-				"VS Code - Build"
+				"Kill eNif - Build",
+				"eNif - Build"
 			],
 			"group": "build",
 			"dependsOrder": "sequence",
 			"problemMatcher": []
 		},
 		{
-			"label": "Kill VS Code - Build, Npm, VS Code - Build",
+			"label": "Kill eNif - Build, Npm, eNif - Build",
 			"dependsOn": [
-				"Kill VS Code - Build",
+				"Kill eNif - Build",
 				"npm: install",
-				"VS Code - Build"
+				"eNif - Build"
 			],
 			"group": "build",
 			"dependsOrder": "sequence",
@@ -287,7 +287,7 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Run and Compile Code - OSS",
+			"label": "Run and Compile eNif",
 			"dependsOn": [
 				"Transpile Client",
 				"Run Dev"

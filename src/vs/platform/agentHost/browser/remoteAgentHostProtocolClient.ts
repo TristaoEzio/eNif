@@ -360,7 +360,7 @@ export class RemoteAgentHostProtocolClient extends Disposable implements IAgentC
 		} else if (isJsonRpcNotification(msg)) {
 			switch (msg.method) {
 				case 'action': {
-					// Protocol envelope → VS Code envelope (superset of action types)
+					// Protocol envelope → eNif envelope (superset of action types)
 					const envelope = msg.params;
 					this._serverSeq = Math.max(this._serverSeq, envelope.serverSeq);
 					this._onDidAction.fire(envelope);
@@ -493,7 +493,7 @@ export class RemoteAgentHostProtocolClient extends Disposable implements IAgentC
 		return deferred.p as Promise<CommandMap[M]['result']>;
 	}
 
-	/** Send a JSON-RPC request for a VS Code extension method (not in the protocol spec). */
+	/** Send a JSON-RPC request for a eNif extension method (not in the protocol spec). */
 	private _sendExtensionRequest<M extends keyof IRemoteAgentHostExtensionCommandMap>(method: M, params?: IRemoteAgentHostExtensionCommandMap[M]['params']): Promise<IRemoteAgentHostExtensionCommandMap[M]['result']> {
 		if (this._closeError) {
 			return Promise.reject(this._closeError);

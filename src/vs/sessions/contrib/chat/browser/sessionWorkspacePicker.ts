@@ -111,7 +111,7 @@ export class WorkspacePicker extends Disposable {
 	private _triggerElement: HTMLElement | undefined;
 	private readonly _renderDisposables = this._register(new DisposableStore());
 
-	/** Cached VS Code recent folder URIs, resolved lazily. */
+	/** Cached eNif recent folder URIs, resolved lazily. */
 	private _vsCodeRecentFolderUris: URI[] = [];
 
 	get selectedProject(): IWorkspaceSelection | undefined {
@@ -169,7 +169,7 @@ export class WorkspacePicker extends Disposable {
 			}
 		}));
 
-		// Load VS Code recent folders eagerly and refresh on changes
+		// Load eNif recent folders eagerly and refresh on changes
 		this._loadVSCodeRecentFolders();
 		this._register(this.workspacesService.onDidChangeRecentlyOpened(() => this._loadVSCodeRecentFolders()));
 	}
@@ -341,7 +341,7 @@ export class WorkspacePicker extends Disposable {
 	 * Builds the picker items list from recent workspaces.
 	 *
 	 * Items are shown in a flat recency-sorted list (most recently used first)
-	 * without source grouping. Own recents come first, followed by VS Code
+	 * without source grouping. Own recents come first, followed by eNif
 	 * recent folders.
 	 */
 	protected _buildItems(): IActionListItem<IWorkspacePickerItem>[] {
@@ -352,7 +352,7 @@ export class WorkspacePicker extends Disposable {
 		const providerIds = new Set(allProviders.map(p => p.id));
 		const ownRecentWorkspaces = this._getRecentWorkspaces().filter(w => providerIds.has(w.providerId));
 
-		// Merge VS Code recent folders (resolved through providers, deduplicated)
+		// Merge eNif recent folders (resolved through providers, deduplicated)
 		const vsCodeRecents = this._getVSCodeRecentWorkspaces().filter(w => providerIds.has(w.providerId));
 		const ownRecentCount = ownRecentWorkspaces.length;
 		const recentWorkspaces = [...ownRecentWorkspaces, ...vsCodeRecents];
@@ -829,7 +829,7 @@ export class WorkspacePicker extends Disposable {
 		}
 	}
 
-	// -- VS Code recent folders -----------------------------------------------
+	// -- eNif recent folders -----------------------------------------------
 
 	private async _loadVSCodeRecentFolders(): Promise<void> {
 		const recentlyOpened = await this.workspacesService.getRecentlyOpened();
@@ -849,7 +849,7 @@ export class WorkspacePicker extends Disposable {
 	}
 
 	/**
-	 * Returns VS Code recent folders resolved through registered session
+	 * Returns eNif recent folders resolved through registered session
 	 * providers, excluding any URIs already present in the sessions' own
 	 * recent workspace history.
 	 */

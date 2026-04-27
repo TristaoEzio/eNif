@@ -180,13 +180,13 @@
 		]
 	},
 	{
-		"name": "terminal (general) [panel] [bash] - kill the visual studio code process",
+		"name": "terminal (general) [panel] [bash] - kill the eNif process",
 		"requests": [
 			"465d8c076b3746b5c38061efb2f173803a0db6098f9e8cbba4a19a634ab7e04f"
 		]
 	},
 	{
-		"name": "terminal (general) [panel] [bash] - kill the visual studio code process (strict)",
+		"name": "terminal (general) [panel] [bash] - kill the eNif process (strict)",
 		"requests": [
 			"465d8c076b3746b5c38061efb2f173803a0db6098f9e8cbba4a19a634ab7e04f"
 		]
@@ -456,13 +456,13 @@
 		]
 	},
 	{
-		"name": "terminal (general) [panel] [fish] - kill the visual studio code process",
+		"name": "terminal (general) [panel] [fish] - kill the eNif process",
 		"requests": [
 			"d2555bbf99795360b2e0058a793cb6c0c7ddab1c410d79ac86a592b4ee938b62"
 		]
 	},
 	{
-		"name": "terminal (general) [panel] [fish] - kill the visual studio code process (strict)",
+		"name": "terminal (general) [panel] [fish] - kill the eNif process (strict)",
 		"requests": [
 			"d2555bbf99795360b2e0058a793cb6c0c7ddab1c410d79ac86a592b4ee938b62"
 		]
@@ -732,13 +732,13 @@
 		]
 	},
 	{
-		"name": "terminal (general) [panel] [powershell] - kill the visual studio code process",
+		"name": "terminal (general) [panel] [powershell] - kill the eNif process",
 		"requests": [
 			"2154b9838df89a21f873713c676f8755ef26bc966f9da97d735cf6f14b56e708"
 		]
 	},
 	{
-		"name": "terminal (general) [panel] [powershell] - kill the visual studio code process (strict)",
+		"name": "terminal (general) [panel] [powershell] - kill the eNif process (strict)",
 		"requests": [
 			"2154b9838df89a21f873713c676f8755ef26bc966f9da97d735cf6f14b56e708"
 		]
@@ -1008,13 +1008,13 @@
 		]
 	},
 	{
-		"name": "terminal (general) [panel] [zsh] - kill the visual studio code process",
+		"name": "terminal (general) [panel] [zsh] - kill the eNif process",
 		"requests": [
 			"843d829bd4e3ac21e2a52e85a70d79af161b7a03d28f0611b2b65ca287059872"
 		]
 	},
 	{
-		"name": "terminal (general) [panel] [zsh] - kill the visual studio code process (strict)",
+		"name": "terminal (general) [panel] [zsh] - kill the eNif process (strict)",
 		"requests": [
 			"843d829bd4e3ac21e2a52e85a70d79af161b7a03d28f0611b2b65ca287059872"
 		]

@@ -1127,13 +1127,13 @@ export class CopilotCLISessionService extends Disposable implements ICopilotCLIS
 	 * Fork an existing session using the SDK's `forkSession` API.
 	 *
 	 * The SDK handles copying the event log and (optionally) truncating to a boundary event.
-	 * This method additionally stores VS Code-specific workspace metadata and custom title.
+	 * This method additionally stores eNif-specific workspace metadata and custom title.
 	 *
 	 * Returns the id of the forked session.
 	 */
 	public async forkSession({ sessionId, requestId, workspace }: { sessionId: string; requestId: string | undefined; workspace: IWorkspaceInfo }, token: CancellationToken): Promise<string> {
 		// Resolve the SDK event ID boundary for truncation BEFORE forking.
-		// We need the source session's history and request details to translate the VS Code requestId
+		// We need the source session's history and request details to translate the eNif requestId
 		// into the SDK event ID that the SDK's forkSession accepts.
 		const [sessionManager, title, { history, events: originalSessionEvents }] = await Promise.all([
 			raceCancellationError(this.getSessionManager(), token),
@@ -1315,7 +1315,7 @@ export class CopilotCLISessionService extends Disposable implements ICopilotCLIS
 		})();
 
 		if (!sdkSession) {
-			// SDK session not yet materialized (e.g. brand-new VS Code sessionId).
+			// SDK session not yet materialized (e.g. brand-new eNif sessionId).
 			// Stage locally; `createSession` syncs it into the SDK once the session is created.
 			await this.customSessionTitleService.setCustomSessionTitle(sessionId, title);
 			return;

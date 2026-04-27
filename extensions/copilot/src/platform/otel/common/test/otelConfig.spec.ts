@@ -37,14 +37,14 @@ describe('resolveOTelConfig', () => {
 		expect(config.otlpEndpoint).toBe('http://collector:4318/');
 	});
 
-	it('enables via VS Code setting', () => {
+	it('enables via eNif setting', () => {
 		const config = resolveOTelConfig(makeInput({
 			settingEnabled: true,
 		}));
 		expect(config.enabled).toBe(true);
 	});
 
-	it('env COPILOT_OTEL_ENABLED overrides VS Code setting', () => {
+	it('env COPILOT_OTEL_ENABLED overrides eNif setting', () => {
 		const config = resolveOTelConfig(makeInput({
 			env: { 'COPILOT_OTEL_ENABLED': 'false' },
 			settingEnabled: true,
@@ -72,7 +72,7 @@ describe('resolveOTelConfig', () => {
 		expect(config.fileExporterPath).toBe('/tmp/otel.jsonl');
 	});
 
-	it('uses VS Code setting for exporter type', () => {
+	it('uses eNif setting for exporter type', () => {
 		const config = resolveOTelConfig(makeInput({
 			settingEnabled: true,
 			settingExporterType: 'console',
@@ -90,7 +90,7 @@ describe('resolveOTelConfig', () => {
 		expect(config.captureContent).toBe(true);
 	});
 
-	it('captureContent env overrides VS Code setting', () => {
+	it('captureContent env overrides eNif setting', () => {
 		const config = resolveOTelConfig(makeInput({
 			env: {
 				'COPILOT_OTEL_ENABLED': 'true',
@@ -193,7 +193,7 @@ describe('resolveOTelConfig', () => {
 			expect(config.enabledVia).toBe('dbSpanExporterOnly');
 		});
 
-		it('returns setting when enabled via VS Code setting', () => {
+		it('returns setting when enabled via eNif setting', () => {
 			const config = resolveOTelConfig(makeInput({
 				settingEnabled: true,
 			}));

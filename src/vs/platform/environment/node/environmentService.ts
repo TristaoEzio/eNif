@@ -45,7 +45,7 @@ export class NativeEnvironmentService extends AbstractNativeEnvironmentService {
 			return undefined;
 		}
 
-		// Honor the same env-var overrides that the host VS Code itself uses
+		// Honor the same env-var overrides that the host eNif itself uses
 		// (portable mode and VSCODE_APPDATA), but intentionally skip --user-data-dir
 		// because that CLI arg belongs to the Agents app, not the host.
 		const hostUserDataPath = getUserDataPath(this.args, hostProductName);

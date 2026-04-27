@@ -9,7 +9,7 @@
 
 /** Tools whose arguments contain a file path being modified or read. */
 const FILE_TRACKING_TOOLS = new Set([
-	// VS Code model-facing tool names (from ToolName enum)
+	// eNif model-facing tool names (from ToolName enum)
 	'replace_string_in_file',
 	'multi_replace_string_in_file',
 	'insert_edit_into_file',
@@ -30,7 +30,7 @@ const GH_MCP_PREFIXES = ['mcp_github_', 'github-mcp-server-'];
 
 /**
  * Extract absolute file path from tool arguments if available.
- * Handles both CLI-style (edit/create with `path`) and VS Code-style tools
+ * Handles both CLI-style (edit/create with `path`) and eNif-style tools
  * that use `filePath`, as well as `apply_patch` which encodes paths in the patch input.
  * @internal Exported for testing.
  */
@@ -39,7 +39,7 @@ export function extractFilePath(toolName: string, toolArgs: unknown): string | u
 	if (typeof toolArgs !== 'object' || toolArgs === null) { return undefined; }
 	const args = toolArgs as Record<string, unknown>;
 
-	// VS Code tools use 'filePath', CLI tools use 'path', list_dir uses 'path',
+	// eNif tools use 'filePath', CLI tools use 'path', list_dir uses 'path',
 	// create_directory uses 'dirPath'
 	const filePath = args.filePath ?? args.path ?? args.dirPath;
 	if (typeof filePath === 'string') { return filePath; }
@@ -179,7 +179,7 @@ export function extractRepoFromMcpTool(toolArgs: unknown): string | undefined {
 
 /**
  * Check whether a tool name is a GitHub MCP server tool.
- * Matches both VS Code-style `mcp_github_*` and CLI-style `github-mcp-server-*` prefixes.
+ * Matches both eNif-style `mcp_github_*` and CLI-style `github-mcp-server-*` prefixes.
  */
 export function isGitHubMcpTool(toolName: string): boolean {
 	return GH_MCP_PREFIXES.some(prefix => toolName.startsWith(prefix));

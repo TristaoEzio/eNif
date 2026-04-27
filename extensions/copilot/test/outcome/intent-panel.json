@@ -258,7 +258,7 @@
 		]
 	},
 	{
-		"name": "intent [panel] - [relaxed] [builtin] favor ajudar com a troca da tela de fundo do visual studio code.",
+		"name": "intent [panel] - [relaxed] [builtin] favor ajudar com a troca da tela de fundo do eNif.",
 		"requests": [
 			"f4aaf276258501d6e6522a96c2a2e4a07b506d1bc194041cd642b64bca7b89f5"
 		]
@@ -408,7 +408,7 @@
 		]
 	},
 	{
-		"name": "intent [panel] - [relaxed] [builtin] how can i configure visual studio code to automatically trim trailing whitespace…",
+		"name": "intent [panel] - [relaxed] [builtin] how can i configure eNif to automatically trim trailing whitespace…",
 		"requests": [
 			"1566ab859848587dbc0f5975be8eb0d4c127663da67fc0623bc7b1b728e7b289"
 		]
@@ -462,7 +462,7 @@
 		]
 	},
 	{
-		"name": "intent [panel] - [relaxed] [builtin] How to change colour theme in VS Code?",
+		"name": "intent [panel] - [relaxed] [builtin] How to change colour theme in eNif?",
 		"requests": [
 			"67d6f922955a66551441e5700265a50f15ae1bc9cd5f4bc1e64a4eceb09a5e93"
 		]
@@ -1110,7 +1110,7 @@
 		]
 	},
 	{
-		"name": "intent [panel] - [strict] [builtin] favor ajudar com a troca da tela de fundo do visual studio code.",
+		"name": "intent [panel] - [strict] [builtin] favor ajudar com a troca da tela de fundo do eNif.",
 		"requests": [
 			"f4aaf276258501d6e6522a96c2a2e4a07b506d1bc194041cd642b64bca7b89f5"
 		]
@@ -1260,7 +1260,7 @@
 		]
 	},
 	{
-		"name": "intent [panel] - [strict] [builtin] how can i configure visual studio code to automatically trim trailing whitespace …",
+		"name": "intent [panel] - [strict] [builtin] how can i configure eNif to automatically trim trailing whitespace …",
 		"requests": [
 			"1566ab859848587dbc0f5975be8eb0d4c127663da67fc0623bc7b1b728e7b289"
 		]
@@ -1314,7 +1314,7 @@
 		]
 	},
 	{
-		"name": "intent [panel] - [strict] [builtin] How to change colour theme in VS Code?",
+		"name": "intent [panel] - [strict] [builtin] How to change colour theme in eNif?",
 		"requests": [
 			"67d6f922955a66551441e5700265a50f15ae1bc9cd5f4bc1e64a4eceb09a5e93"
 		]

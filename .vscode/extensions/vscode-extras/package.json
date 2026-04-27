@@ -1,7 +1,7 @@
 {
 	"name": "vscode-extras",
-	"displayName": "VS Code Extras",
-	"description": "Extra utility features for the VS Code selfhost workspace",
+	"displayName": "eNif Extras",
+	"description": "Extra utility features for the eNif selfhost workspace",
 	"engines": {
 		"vscode": "^1.88.0"
 	},
@@ -25,7 +25,7 @@
 	},
 	"contributes": {
 		"configuration": {
-			"title": "VS Code Extras",
+			"title": "eNif Extras",
 			"properties": {
 				"vscode-extras.npmUpToDateFeature.enabled": {
 					"type": "boolean",

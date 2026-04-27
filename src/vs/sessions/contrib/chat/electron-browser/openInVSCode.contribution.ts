@@ -29,9 +29,9 @@ import { isLinux } from '../../../../base/common/platform.js';
 import { IEnvironmentService } from '../../../../platform/environment/common/environment.js';
 
 /**
- * Desktop version of the "Open in VS Code" action.
+ * Desktop version of the "Open in eNif" action.
  *
- * In built builds with a sibling app configured, launches the host VS Code app
+ * In built builds with a sibling app configured, launches the host eNif app
  * via {@link INativeHostService.launchSiblingApp} (child_process.spawn) with
  * direct CLI arguments, bypassing protocol handlers and their OS security
  * prompts. In dev builds (no sibling app), falls back to the protocol handler
@@ -43,7 +43,7 @@ registerAction2(class OpenSessionWorktreeInVSCodeAction extends Action2 {
 	constructor() {
 		super({
 			id: OpenSessionWorktreeInVSCodeAction.ID,
-			title: localize2('openInVSCode', 'Open in VS Code'),
+			title: localize2('openInVSCode', 'Open in eNif'),
 			icon: Codicon.vscodeInsiders,
 			precondition: ContextKeyExpr.and(IsAuxiliaryWindowContext.toNegated(), SessionsWelcomeVisibleContext.toNegated()),
 			menu: [{

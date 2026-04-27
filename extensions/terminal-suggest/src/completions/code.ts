@@ -858,7 +858,7 @@ export const codeTunnelSubcommands: Fig.Subcommand[] = [
 	},
 	{
 		name: 'serve-web',
-		description: 'Runs a local web version of Code - OSS',
+		description: 'Runs a local web version of eNif',
 		options: [
 			{
 				name: '--host',
@@ -1027,7 +1027,7 @@ export const codeTunnelSubcommands: Fig.Subcommand[] = [
 			},
 			{
 				name: 'serve-web',
-				description: 'Runs a local web version of Code - OSS',
+				description: 'Runs a local web version of eNif',
 			},
 			{
 				name: 'command-shell',
@@ -1048,7 +1048,7 @@ export const codeTunnelSubcommands: Fig.Subcommand[] = [
 
 const codeCompletionSpec: Fig.Spec = {
 	name: 'code',
-	description: 'Visual Studio Code',
+	description: 'eNif',
 	args: {
 		template: ['filepaths', 'folders'],
 		isVariadic: true,

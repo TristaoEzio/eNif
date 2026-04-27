@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is the **GitHub Copilot Chat** extension for Visual Studio Code - a VS Code extension that provides conversational AI assistance, a coding agent with many tools, inline editing capabilities, and advanced AI-powered features for VS Code.
+This is the **GitHub Copilot Chat** extension for eNif - a VS Code extension that provides conversational AI assistance, a coding agent with many tools, inline editing capabilities, and advanced AI-powered features for VS Code.
 
 ### Key Features
 - **Chat Interface**: Conversational AI assistance with chat participants, variables, and slash commands

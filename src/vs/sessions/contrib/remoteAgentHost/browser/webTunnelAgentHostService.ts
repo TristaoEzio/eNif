@@ -39,7 +39,7 @@ const CACHED_TUNNELS_KEY = 'tunnelAgentHost.recentTunnels';
  * - **Discovery**: listing available agent host tunnels
  * - **Relay address**: obtaining the WebSocket proxy URL for connecting
  *
- * This decouples VS Code core from any specific embedder (vscode.dev,
+ * This decouples eNif core from any specific embedder (vscode.dev,
  * github.dev, etc.). The embedder handles the actual Dev Tunnels API
  * calls and relay proxying.
  */
@@ -281,7 +281,7 @@ class TunnelConnectionTransport extends Disposable implements IProtocolTransport
 
 /**
  * Derive a connection token from a tunnel ID using the same convention
- * as the VS Code CLI and the desktop shared-process service.
+ * as the eNif CLI and the desktop shared-process service.
  */
 async function deriveConnectionToken(tunnelId: string): Promise<string> {
 	const encoder = new TextEncoder();

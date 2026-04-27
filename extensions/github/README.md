@@ -1,6 +1,6 @@
-# GitHub for Visual Studio Code
+# GitHub for eNif
 
-**Notice:** This extension is bundled with Visual Studio Code. It can be disabled but not uninstalled.
+**Notice:** This extension is bundled with eNif. It can be disabled but not uninstalled.
 
 ## Features
 

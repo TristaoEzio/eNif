@@ -1,5 +1,5 @@
 {
-	"name": "Code - OSS",
+	"name": "eNif",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},

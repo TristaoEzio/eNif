@@ -151,7 +151,7 @@
 	},
 	{
 		"Location": "panel",
-		"Request": "favor ajudar com a troca da tela de fundo do visual studio code.",
+		"Request": "favor ajudar com a troca da tela de fundo do eNif.",
 		"Intent": "vscode"
 	},
 	{
@@ -556,12 +556,12 @@
 	},
 	{
 		"Location": "panel",
-		"Request": "how can i configure visual studio code to automatically trim trailing whitespace when saving a file?",
+		"Request": "how can i configure eNif to automatically trim trailing whitespace when saving a file?",
 		"Intent": "vscode"
 	},
 	{
 		"Location": "panel",
-		"Request": "How to change colour theme in VS Code?",
+		"Request": "How to change colour theme in eNif?",
 		"Intent": "vscode"
 	},
 	{

@@ -178,28 +178,28 @@ async function main(buildDir?: string, skipProvisioningProfile?: boolean): Promi
 			'-insert',
 			'NSAppleEventsUsageDescription',
 			'-string',
-			'An application in Visual Studio Code wants to use AppleScript.',
+			'An application in eNif wants to use AppleScript.',
 			`${infoPlistPath}`
 		]);
 		await spawn('plutil', [
 			'-replace',
 			'NSMicrophoneUsageDescription',
 			'-string',
-			'An application in Visual Studio Code wants to use the Microphone.',
+			'An application in eNif wants to use the Microphone.',
 			`${infoPlistPath}`
 		]);
 		await spawn('plutil', [
 			'-replace',
 			'NSCameraUsageDescription',
 			'-string',
-			'An application in Visual Studio Code wants to use the Camera.',
+			'An application in eNif wants to use the Camera.',
 			`${infoPlistPath}`
 		]);
 		await spawn('plutil', [
 			'-replace',
 			'NSAudioCaptureUsageDescription',
 			'-string',
-			'An application in Visual Studio Code wants to use Audio Capture.',
+			'An application in eNif wants to use Audio Capture.',
 			`${infoPlistPath}`
 		]);
 		await spawn('plutil', [

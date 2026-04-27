@@ -22,7 +22,7 @@ const MIGRATION_STATE_KEY = 'sharedKeychain.migrationDone';
 const HOST_SPAWN_STATE_KEY = 'sharedKeychain.hostSpawnDone';
 
 /**
- * Coordinates one-time secret migration between the VS Code app and the
+ * Coordinates one-time secret migration between the eNif app and the
  * agents app via the macOS shared keychain (macOS only).
  *
  * Each app migrates its own secrets from safeStorage+SQLite into the

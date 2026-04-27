@@ -25,7 +25,7 @@ import { ISessionsProvidersService } from '../../../services/sessions/browser/se
 import { resolveRemoteAuthority } from './openInVSCodeUtils.js';
 
 /**
- * Opens the host VS Code app from the Agents window via protocol handler.
+ * Opens the host eNif app from the Agents window via protocol handler.
  * On desktop this action is replaced by the electron-browser override that
  * uses {@link INativeHostService.launchSiblingApp} instead.
  */
@@ -35,7 +35,7 @@ registerAction2(class OpenSessionWorktreeInVSCodeAction extends Action2 {
 	constructor() {
 		super({
 			id: OpenSessionWorktreeInVSCodeAction.ID,
-			title: localize2('openInVSCode', 'Open in VS Code'),
+			title: localize2('openInVSCode', 'Open in eNif'),
 			icon: Codicon.vscodeInsiders,
 			precondition: ContextKeyExpr.and(IsAuxiliaryWindowContext.toNegated(), SessionsWelcomeVisibleContext.toNegated()),
 			menu: [{

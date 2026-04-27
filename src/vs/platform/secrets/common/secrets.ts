@@ -75,7 +75,7 @@ export async function writeEncryptedSecret(
 }
 
 /**
- * Secret keys that should be shared between the VS Code app and the agents app.
+ * Secret keys that should be shared between the eNif app and the agents app.
  */
 export const CROSS_APP_SHARED_SECRET_KEYS: readonly string[] = [
 	'{"extensionId":"vscode.github-authentication","key":"github.auth"}',

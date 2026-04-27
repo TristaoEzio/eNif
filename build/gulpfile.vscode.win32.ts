@@ -118,9 +118,9 @@ function buildWin32Setup(arch: string, target: string): task.CallbackTask {
 			: undefined;
 
 		if (embedded) {
-			// VS Code's sibling is the embedded app.
+			// eNif's sibling is the embedded app.
 			productJson['win32SiblingExeBasename'] = embedded.nameShort;
-			// The embedded app's sibling is VS Code.
+			// The embedded app's sibling is eNif.
 			if (productJson['embedded']) {
 				productJson['embedded']['win32SiblingExeBasename'] = product.nameShort;
 			}

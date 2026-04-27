@@ -36,8 +36,8 @@ ArchitecturesInstallIn64BitMode={#ArchitecturesInstallIn64BitMode}
 WizardStyle=modern
 
 // We've seen an uptick on broken installations from updates which were unable
-// to shutdown VS Code. We rely on the fact that the update signals
-// that VS Code is ready to be shutdown, so we're good to use `force` here.
+// to shutdown eNif. We rely on the fact that the update signals
+// that eNif is ready to be shutdown, so we're good to use `force` here.
 CloseApplications=force
 
 #ifdef Sign
@@ -1356,7 +1356,7 @@ begin
 
   #if "user" == InstallTarget
     if not WizardSilent() and IsAdmin() then begin
-      if MsgBox('This User Installer is not meant to be run as an Administrator. If you would like to install VS Code for all users in this system, download the System Installer instead from https://code.visualstudio.com. Are you sure you want to continue?', mbError, MB_OKCANCEL) = IDCANCEL then begin
+      if MsgBox('This User Installer is not meant to be run as an Administrator. If you would like to install eNif for all users in this system, download the System Installer instead from https://code.visualstudio.com. Are you sure you want to continue?', mbError, MB_OKCANCEL) = IDCANCEL then begin
         Result := False;
       end;
     end;
@@ -1491,7 +1491,7 @@ begin
   	Result := '';
 end;
 
-// VS Code will create a flag file before the update starts (/update=C:\foo\bar)
+// eNif will create a flag file before the update starts (/update=C:\foo\bar)
 // - if the file exists at this point, the user quit Code before the update finished, so don't start Code after update
 // - otherwise, the user has accepted to apply the update and Code should start
 function LockFileExists(): Boolean;
@@ -1499,7 +1499,7 @@ begin
   Result := FileExists(ExpandConstant('{param:update}'))
 end;
 
-// Check if VS Code created a session-end flag file to indicate OS is shutting down
+// Check if eNif created a session-end flag file to indicate OS is shutting down
 // This prevents calling inno_updater.exe during system shutdown
 function SessionEndFileExists(): Boolean;
 begin
@@ -1511,7 +1511,7 @@ begin
   Result := not (IsBackgroundUpdate() and FileExists(Path));
 end;
 
-// Check if VS Code created a cancel file to signal that the update should be aborted
+// Check if eNif created a cancel file to signal that the update should be aborted
 function CancelFileExists(): Boolean;
 begin
   Result := FileExists(ExpandConstant('{param:cancel}'))
@@ -1640,7 +1640,7 @@ end;
 function GetSetupMutex(Value: string): string;
 begin
   // Always create the base setup mutex to prevent multiple installers running.
-  // During background updates, also create a -updating mutex that VS Code checks
+  // During background updates, also create a -updating mutex that eNif checks
   // to avoid launching while an update is in progress.
   if IsBackgroundUpdate() then
 #ifdef ProxyMutex

@@ -7,7 +7,7 @@ export interface IPackageJson {
 	name: string;
 	version: string;
 
-	// Partial typings for VS Code contributions
+	// Partial typings for eNif contributions
 	contributes?: {
 		debuggers?: IDebugConfigSchema[];
 	};

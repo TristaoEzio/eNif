@@ -377,7 +377,7 @@ for (const shellType of supportedShells) {
 			},
 		},
 		{
-			shellType, question: 'kill the visual studio code process',
+			shellType, question: 'kill the eNif process',
 			bestAnswer: {
 				powershell: [
 					/Stop-Process -Name "?[cC]ode"?/
@@ -386,14 +386,14 @@ for (const shellType of supportedShells) {
 					/pkill( -f)? "?code"?/,
 					'kill (pidof code)',
 					/kill \(pgrep [cC]ode\)/,
-					/killall (vscode|[cC]ode|["']Visual Studio Code["'])/,
+					/killall (vscode|[cC]ode|["']eNif["'])/,
 				],
 				default: [
 					/pkill( -f)? "?code"?/,
-					/pkill -f ["']Visual Studio Code["']/,
-					/killall (vscode|[cC]ode|["']Visual Studio Code["'])/,
+					/pkill -f ["']eNif["']/,
+					/killall (vscode|[cC]ode|["']eNif["'])/,
 					'kill $(pgrep code)',
-					/kill \$\(pgrep -f ["']Visual Studio Code["']\)/,
+					/kill \$\(pgrep -f ["']eNif["']\)/,
 				]
 			},
 			acceptableAnswers: {

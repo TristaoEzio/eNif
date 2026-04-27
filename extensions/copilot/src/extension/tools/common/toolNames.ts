@@ -11,7 +11,7 @@ import { cloneAndChange } from '../../../util/vs/base/common/objects';
 export enum ToolCategory {
 	JupyterNotebook = 'Jupyter Notebook Tools',
 	WebInteraction = 'Web Interaction',
-	VSCodeInteraction = 'VS Code Interaction',
+	VSCodeInteraction = 'eNif Interaction',
 	Testing = 'Testing',
 	RedundantButSpecific = 'Redundant but Specific',
 	// Core tools that should not be grouped
@@ -239,7 +239,7 @@ export const toolCategories: Record<ToolName, ToolCategory> = {
 	[ToolName.CoreHandleDialog]: ToolCategory.WebInteraction,
 	[ToolName.CoreRunPlaywrightCode]: ToolCategory.WebInteraction,
 
-	// VS Code Interaction
+	// eNif Interaction
 	[ToolName.SearchWorkspaceSymbols]: ToolCategory.VSCodeInteraction,
 	[ToolName.GetErrors]: ToolCategory.VSCodeInteraction,
 	[ToolName.VSCodeAPI]: ToolCategory.VSCodeInteraction,

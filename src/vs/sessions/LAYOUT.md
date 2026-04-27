@@ -6,7 +6,7 @@ This document is the **authoritative specification** for the Agent Sessions work
 
 ## 1. Overview
 
-The Agent Sessions Workbench (`Workbench` in `sessions/browser/workbench.ts`) provides a simplified, fixed layout optimized for agent session workflows. Unlike the default VS Code workbench, this layout:
+The Agent Sessions Workbench (`Workbench` in `sessions/browser/workbench.ts`) provides a simplified, fixed layout optimized for agent session workflows. Unlike the default eNif workbench, this layout:
 
 - Does **not** support settings-based customization
 - Has **fixed** part positions
@@ -108,7 +108,7 @@ The Agent Sessions titlebar includes a custom left toolbar that appears after th
 | Toggle Sidebar | `workbench.action.agentToggleSidebarVisibility` | Left toolbar (`TitleBarLeft`) | Toggles primary sidebar visibility |
 | Agent Host Filter | `sessions.agentHostFilter.pick` | Left toolbar (`TitleBarLeft`) | Dropdown indicator of the host the workbench is scoped to; lets the user switch hosts or pick "All Hosts". Visible when at least one remote agent host is known (`sessions.hasAgentHosts`). Renders via a custom `HostFilterActionViewItem`. |
 | Run Script | `workbench.action.agentSessions.runScript` | Right toolbar (`TitleBarRight`) | Split button: runs configured script or shows configure dialog |
-| Open... | (submenu) | Right toolbar (`TitleBarRight`) | Split button submenu: Open Terminal, Open in VS Code |
+| Open... | (submenu) | Right toolbar (`TitleBarRight`) | Split button submenu: Open Terminal, Open in eNif |
 | Toggle Secondary Sidebar | `workbench.action.agentToggleSecondarySidebarVisibility` | Right toolbar (`TitleBarRight`) | Toggles auxiliary bar visibility |
 
 The toggle sidebar action:
@@ -125,7 +125,7 @@ The Run Script action:
 
 The Open... action:
 - Displayed as a split button via `Menus.OpenSubMenu` on `Menus.TitleBarRight`
-- Contains "Open Terminal" (opens terminal at session worktree) and "Open in VS Code" (opens worktree in new VS Code window)
+- Contains "Open Terminal" (opens terminal at session worktree) and "Open in eNif" (opens worktree in new eNif window)
 - Registered in `contrib/chat/browser/chat.contribution.ts`
 
 ### 3.5 Panel Title Actions
@@ -556,7 +556,7 @@ src/vs/sessions/
 │   │   ├── changesView.ts
 │   │   └── media/
 │   ├── chat/browser/                       # Chat actions and services
-│   │   ├── chat.contribution.ts            # Open in VS Code, Open Terminal, branch chat, run script, prompts service
+│   │   ├── chat.contribution.ts            # Open in eNif, Open Terminal, branch chat, run script, prompts service
 │   │   ├── branchChatSessionAction.ts      # Branch chat session action
 │   │   ├── runScriptAction.ts              # Run script contribution and split button
 │   │   └── promptsService.ts              # Agentic prompts service override
@@ -672,7 +672,7 @@ interface IPartVisibilityState {
 | 2026-04-22 | Updated the sessions auxiliary bar sizing rules so attached diff editors and integrated browser editors keep the normal 270px auxiliary-bar minimum width while disabling sash snap-to-close in that state, and the titlebar toggle continues to hide/show the secondary sidebar normally. |
 | 2026-04-22 | Updated the sessions **Maximize Editor** and **Restore Editor** actions so maximize hides the panel only when the terminal view is currently visible, and restore reopens that terminal panel when maximize hid it. |
 | 2026-04-21 | Renamed the command-center "Add Chat" titlebar action to "New Sub-Session" so the plus-button tooltip matches the sub-session workflow. |
-| 2026-04-21 | Removed the remaining left-margin spacing after the titlebar's VS Code and session-picker items, and dropped the command-center "Mark as Done" checkmark button next to the active session title. |
+| 2026-04-21 | Removed the remaining left-margin spacing after the titlebar's eNif and session-picker items, and dropped the command-center "Mark as Done" checkmark button next to the active session title. |
 | 2026-04-21 | Removed the titlebar's vertical separator bars in favor of spacing-only group separation, and removed the dot separator between the active session title and its folder/worktree metadata. |
 | 2026-04-21 | Updated the sessions chat composite bar tabs to preserve each chat title's original casing instead of applying per-word capitalization. |
 | 2026-04-21 | Moved the sessions-only default notification placement to bottom-right and documented the sessions-specific notification center offsets: `15px` from the bottom/right or bottom/left edges, and `top: 40px; right: 15px;` for top-right placement. |
